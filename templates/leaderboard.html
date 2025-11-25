@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h3 class="mb-3">Leaderboard</h3>
+    <div class="table-responsive">
+      <table class="table table-striped align-middle">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nickname</th>
+            <th>Skor</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for u in top %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ u.nickname }}</td>
+            <td>{{ u.total_score }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

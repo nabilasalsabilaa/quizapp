@@ -1,0 +1,38 @@
+/* Pastel theme colors */
+:root{
+  --pastel-1: #ffd6e0; /* soft pink */
+  --pastel-2: #e6f7ff; /* soft blue */
+  --pastel-3: #fff3bf; /* soft yellow */
+  --accent: #6a4fb1;   /* muted purple for accents */
+}
+
+/* background soft */
+.bg-pastel-100 { background: linear-gradient(90deg, var(--pastel-2), var(--pastel-1)); }
+.bg-pastel-2 { background: linear-gradient(180deg, #ffffff 0%, #f8f9ff 100%); }
+
+/* primary pastel button */
+.btn-pastel {
+  background: linear-gradient(90deg,#ff9db9 0%, #7fc8ff 100%);
+  border: none;
+  box-shadow: 0 6px 18px rgba(123,110,160,0.08);
+}
+
+/* small logo dot */
+.logo-dot {
+  display:inline-block;
+  width:34px; height:34px; border-radius:8px;
+  background: linear-gradient(45deg, #ffd6e0, #e6f7ff);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* card tweaks */
+.card { border-radius: 12px; }
+
+/* list-group-item pairing */
+.list-group-item input { transform: scale(1.1); }
+
+/* responsive tweaks */
+@media (max-width:576px){
+  .logo-dot { width:28px; height:28px; }
+  .btn-pastel { padding: 10px 14px; font-size: 0.95rem; }
+}
